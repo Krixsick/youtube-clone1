@@ -37,3 +37,74 @@
     width: 30%;
   }
 }
+
+/* Computer Responsiveness*/
+
+@media screen and (min-width: 600px) {
+  .youtube-navbar-icons {
+    width: 25px;
+    height: 25px;
+  }
+  .youtube-icon {
+    width: 70px;
+    height: 60px;
+  }
+  .leftbox-navbar-icons {
+    width: 18%;
+  }
+  .rightbox-navbar-icons {
+    width: 24%;
+  }
+  .middlebox-navbar-search {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .leftbox-navbar-icons {
+    width: 15%;
+  }
+  .rightbox-navbar-icons {
+    width: 20%;
+    margin-right: 8px;
+  }
+  .middlebox-navbar-search {
+    width: 55%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .leftbox-navbar-icons {
+    width: 13%;
+  }
+  .rightbox-navbar-icons {
+    width: 18%;
+  }
+  .middlebox-navbar-search {
+    width: 59%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .leftbox-navbar-icons {
+    width: 11%;
+  }
+  .rightbox-navbar-icons {
+    width: 16%;
+  }
+  .middlebox-navbar-search {
+    width: 63%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .leftbox-navbar-icons {
+    width: 10%;
+  }
+  .rightbox-navbar-icons {
+    width: 15%;
+  }
+  .middlebox-navbar-search {
+    width: 70%;
+  }
+}
