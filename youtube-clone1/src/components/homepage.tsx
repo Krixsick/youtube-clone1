@@ -3,6 +3,20 @@ import { useGetVideos, useGetVideosViews } from "../queries/youtube";
 import { useNavigate } from "@tanstack/react-router";
 import { useMemo } from "react";
 
+function formatViews(count: string | number | undefined): string {
+  const num = typeof count === "string" ? parseInt(count, 10) : (count ?? 0);
+  if (num >= 1_000_000_000) {
+    return (num / 1_000_000_000).toFixed(1).replace(/\.0$/, "") + "B";
+  }
+  if (num >= 1_000_000) {
+    return (num / 1_000_000).toFixed(1).replace(/\.0$/, "") + "M";
+  }
+  if (num >= 1_000) {
+    return (num / 1_000).toFixed(1).replace(/\.0$/, "") + "K";
+  }
+  return num.toString();
+}
+
 export default function homepage() {
   const { data: videos = [], isLoading, isError } = useGetVideos();
   const navigate = useNavigate();
@@ -33,21 +47,21 @@ export default function homepage() {
         return (
           <div
             key={video.id.videoId}
-            className="bg-red-100 mt-[5%] w-[90%] h-[450px] cursor-pointer"
+            className="bg-red-100 mt-[5%] w-[90%] h-[450px] cursor-pointer rounded-3xl"
             onClick={() => navigate({ to: `/video/${vid}` })}
           >
             <div className="w-full h-[70%]">
               <img
                 src={video.snippet.thumbnails.medium.url}
                 alt={video.snippet.title}
-                className="w-full h-full object-cover rounded"
+                className="w-full h-full object-cover rounded-3xl"
               />
             </div>
             <div>
               <p></p>
               <p>{video.snippet.title}</p>
               <p>{video.snippet.description}</p>
-              <p>{viewsById.get(vid) ?? "0"} views</p>
+              <p>{formatViews(viewsById.get(vid) ?? "0")} views</p>
               <p>{new Date(video.snippet.publishedAt).toLocaleDateString()}</p>
             </div>
           </div>
