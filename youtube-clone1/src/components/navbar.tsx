@@ -67,12 +67,12 @@ export default function navbar() {
   ) : (
     <div className="w-screen h-[7vh] flex justify-between items-center bg-black">
       {/* Left side of navbar*/}
-      <div className="ml-[10px] flex w-[10%] h-full justify-between items-center">
+      <div className="ml-[10px] flex leftbox-navbar-icons h-full justify-between items-center">
         <img className="youtube-navbar-icons" src={menu} />
-        <img className="youtube-navbar-icons" src={youtubeLogo} />
+        <img className="youtube-icon" src={youtubeLogo} />
       </div>
       {/* Middle side of navbar*/}
-      <div className="w-[40%] h-full flex items-center justify-center">
+      <div className="middlebox-navbar-search h-full flex items-center justify-center">
         <form className="w-full h-full flex justify-center items-center">
           <input
             {...register("search")}
@@ -85,7 +85,7 @@ export default function navbar() {
         </form>
       </div>
       {/* Right side of navbar*/}
-      <div className="w-[18%] h-full flex items-center justify-around">
+      <div className="rightbox-navbar-icons h-full flex items-center justify-around">
         <img className="youtube-navbar-icons" src={upload} />
         <img className="youtube-navbar-icons" src={apps} />
         <img className="youtube-navbar-icons" src={bell} />
