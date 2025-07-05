@@ -1,0 +1,98 @@
+/* Mobile Responsiveness*/
+@media screen and (min-width: 320px) {
+  .channel-profile {
+    width: 20px;
+    height: 20px;
+  }
+  .video-title {
+    font-size: 10px;
+  }
+  .video-subtitles {
+    font-size: 8px;
+  }
+  .video-thumbnail-container {
+    height: 75%;
+  }
+  .video-container {
+    height: 220px;
+  }
+}
+
+@media screen and (min-width: 360px) {
+  .video-thumbnail-container {
+    height: 80%;
+  }
+  .video-container {
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .channel-profile {
+    width: 30px;
+    height: 30px;
+  }
+  .video-title {
+    font-size: 12px;
+  }
+  .video-subtitles {
+    font-size: 10px;
+  }
+  .video-thumbnail-container {
+    height: 80%;
+  }
+  .video-container {
+    height: 270px;
+  }
+}
+
+@media screen and (min-width: 420px) {
+  .video-container {
+    height: 290px;
+  }
+  .video-thumbnail-container {
+    height: 75%;
+  }
+}
+
+@media screen and (min-width: 475px) {
+  .video-title {
+    font-size: 13px;
+  }
+  .video-subtitles {
+    font-size: 11px;
+  }
+  .video-thumbnail-container {
+    height: 80%;
+  }
+  .video-container {
+    height: 310px;
+  }
+}
+
+@media screen and (min-width: 540px) {
+  .video-title {
+    font-size: 14px;
+  }
+  .video-subtitles {
+    font-size: 12px;
+  }
+  .video-thumbnail-container {
+    height: 80%;
+  }
+  .video-container {
+    height: 330px;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .video-title {
+    font-size: 15px;
+  }
+  .video-subtitles {
+    font-size: 13px;
+  }
+  .video-container {
+    height: 350px;
+  }
+}

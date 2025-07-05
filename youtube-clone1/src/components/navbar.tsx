@@ -17,7 +17,8 @@ export default function navbar() {
   const { register } = useForm();
   const [searchIconState, setSearchIconState] = useState(false);
   return isMobile ? (
-    <div className="w-screen h-[7vh] bg-black">
+    <div className="w-screen h-[7vh] bg-black fixed">
+      {/* Back button when pressed on search icon */}
       {searchIconState ? (
         <div className="w-full h-full flex justify-between items-center">
           <div className="w-[10%] h-full flex justify-center items-center">
@@ -29,6 +30,7 @@ export default function navbar() {
               }}
             />
           </div>
+          {/* Search Bar when pressed on icon*/}
           <form className="w-[85%] h-full flex justify-center items-center">
             <input
               {...register("search")}
@@ -45,20 +47,20 @@ export default function navbar() {
         <div className="w-full h-full flex justify-between items-center">
           {/* Left side of navbar*/}
           <div className="ml-[10px] flex w-[20%] h-full justify-between items-center">
-            <img className="youtube-icon" src={youtubeLogo} />
+            <img className="youtube-icon cursor-pointer" src={youtubeLogo} />
           </div>
           {/* Middle side of navbar*/}
           {/* Right side of navbar*/}
           <div className="rightbox-navbar-icons  h-full flex items-center justify-around">
             <img
-              className="youtube-navbar-icons"
+              className="youtube-navbar-icons cursor-pointer"
               src={searchIcon}
               onClick={() => {
                 setSearchIconState(!searchIconState);
               }}
             />
-            <img className="youtube-navbar-icons" src={apps} />
-            <img className="youtube-navbar-icons" src={bell} />
+            <img className="youtube-navbar-icons cursor-pointer" src={apps} />
+            <img className="youtube-navbar-icons cursor-pointer" src={bell} />
             <div className="rounded-[50] youtube-navbar-icons bg-white"></div>
           </div>
         </div>
