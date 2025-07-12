@@ -96,3 +96,13 @@
     height: 350px;
   }
 }
+
+/* Desktop Homepage*/
+@media screen and (min-width: 600px) {
+  .video-title {
+    font-size: min(2.5vw, 20px);
+  }
+  .video-subtitles {
+    font-size: min(1.75vw, 16px);
+  }
+}
