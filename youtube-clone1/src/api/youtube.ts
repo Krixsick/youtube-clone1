@@ -11,7 +11,7 @@ export async function getVideos(): Promise<SearchResult[]> {
     {
       params: {
         part: "snippet",
-        maxResults: 10,
+        maxResults: 25,
         q: "cats",
         type: "video",
         key: API_KEY, // your real key here
